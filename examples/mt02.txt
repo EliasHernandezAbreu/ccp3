@@ -1,0 +1,5 @@
+# lenguaje que cuenta as y bes de la cadena de entrada, e imprime
+# el número de as seguido del de bes, en el formato:
+# .1^n.1^m. donde n es el número de bes y m el de as.
+# si no hay bes se escribe un 0 en su lugar
+# si no hay as no se escribe nada en su lugar
