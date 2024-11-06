@@ -3,7 +3,7 @@
  * Practica 3 - Turing machine
  * 
  * @author Elías Hernández Abreu
- * @brief Automaton header
+ * @brief Turing machine header
  */
 
 #pragma once
@@ -30,6 +30,12 @@ public:
     bool run(const std::string& word) const;
 
 private:
+    /**
+    * Gets the next transition given a state and a tape read
+    * @param state The current state
+    * @param read The read symbol in the tape
+    * @return The index of the next transition or -1 if not available
+    */
     int get_next_transition(const std::string& state, char read) const;
 
     Alphabet<std::string> states;

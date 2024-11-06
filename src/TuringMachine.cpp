@@ -1,3 +1,11 @@
+/**
+ * Complejidad Computacional
+ * Practica 3 - Turing machine
+ * 
+ * @author Elías Hernández Abreu
+ * @brief Turing machine definition
+ */
+
 #include <regex>
 #include <sstream>
 #include <string>

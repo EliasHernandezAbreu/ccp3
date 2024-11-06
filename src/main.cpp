@@ -1,3 +1,11 @@
+/**
+ * Complejidad Computacional
+ * Practica 3 - Turing machine
+ * 
+ * @author Elías Hernández Abreu
+ * @brief Main file
+ */
+
 #include "TuringMachine.hpp"
 #include <cstdio>
 #include <cstring>
@@ -27,6 +35,7 @@ int main (int argc, char *argv[]) {
         return 1;
     }
 
+    // Read file
     std::ifstream input_stream(file_path);
     if (!std::filesystem::exists(file_path)) {
         printf("Could not open file \"%s\"\n", file_path);
@@ -42,6 +51,7 @@ int main (int argc, char *argv[]) {
     file_contents_buf << input.rdbuf();
     std::string file_contents = file_contents_buf.str();
 
+    // Run turing machine
     try {
         TuringMachine turing_machine(file_contents);
         std::string word = "";

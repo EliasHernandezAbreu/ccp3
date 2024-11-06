@@ -1,3 +1,11 @@
+/**
+ * Complejidad Computacional
+ * Practica 3 - Turing machine
+ * 
+ * @author Elías Hernández Abreu
+ * @brief Tape definition
+ */
+
 #include "Tape.hpp"
 
 Tape::Tape(const Alphabet<char>& alphabet, char blank, const std::string& starting_string) {
