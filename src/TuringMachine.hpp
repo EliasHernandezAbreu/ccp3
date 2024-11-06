@@ -8,9 +8,10 @@
 
 #pragma once
 
-#include <set>
 #include <string>
 #include <vector>
+
+#include "Alphabet.hpp"
 #include "Transition.hpp"
 
 class TuringMachine {
@@ -23,12 +24,12 @@ public:
     TuringMachine(const std::string& declaration);
 
 private:
-    std::set<std::string> states;
-    std::set<char> input_alphabet;
-    std::set<char> tape_alphabet;
+    Alphabet<std::string> states;
+    Alphabet<char> input_alphabet;
+    Alphabet<char> tape_alphabet;
     std::string initial_state;
     char blank_symbol;
-    std::set<std::string> accepting_states;
+    Alphabet<std::string> accepting_states;
     std::vector<Transition> transitions;
 };
 
