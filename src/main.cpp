@@ -3,6 +3,7 @@
 #include <cstring>
 #include <filesystem>
 #include <fstream>
+#include <iostream>
 
 int main (int argc, char *argv[]) {
     // Process args
@@ -41,7 +42,21 @@ int main (int argc, char *argv[]) {
     file_contents_buf << input.rdbuf();
     std::string file_contents = file_contents_buf.str();
 
-    TuringMachine turing_machine(file_contents);
+    try {
+        TuringMachine turing_machine(file_contents);
+        std::string word = "";
+        std::cout << "Enter a word to analyse (use \".\" to exit): ";
+        while (std::getline(std::cin, word)) {
+            if (word == ".") break;
+            bool belongs = turing_machine.run(word);
+            if (belongs) printf("\nThe word %s was recognized\n", word.c_str());
+            else printf("\nThe word %s was NOT recognized\n", word.c_str());
+            std::cout << "\nEnter a word to analyse (use \".\" to exit): ";
+        }
+
+    } catch (std::runtime_error e) {
+        printf("%s\n", e.what());
+    }
 
     return 0;
 }
