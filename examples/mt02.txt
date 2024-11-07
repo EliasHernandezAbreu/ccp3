@@ -3,12 +3,12 @@
 # .1^n.1^m. donde n es el número de bes y m el de as.
 # si no hay bes se escribe un 0 en su lugar
 # si no hay as no se escribe nada en su lugar
-q0 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 q13 q14 q15
+q0 q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 q14 q15 q17 q18 q19
 a b
 a b x y 1 0 .
 q0
 .
-q13
+q19
 q0 a q0 a R
 q0 y q0 y R
 q0 b q1 y R
@@ -34,7 +34,7 @@ q5 . q6 . R
 q6 x q6 x R
 q6 y q6 y R
 q6 a q7 x R
-q6 . q13 . R
+q6 . q17 . L
 q7 a q7 a R
 q7 x q7 x R
 q7 y q7 y R
@@ -53,3 +53,9 @@ q12 a q12 a L
 q12 x q12 x L
 q12 y q12 y L
 q12 . q6 . R
+q17 x q17 . L
+q17 y q17 . L
+q17 . q18 . R
+q18 . q18 . R
+q18 1 q19 1 L
+q18 0 q19 0 L
