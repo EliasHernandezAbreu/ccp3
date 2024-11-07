@@ -79,6 +79,11 @@ TuringMachine::TuringMachine(const std::string& declaration) {
             throw std::runtime_error("Final state not in states");
     }
 
+    for (char input_symbol : input_alphabet) {
+        if (!tape_alphabet.has(input_symbol))
+            throw std::runtime_error("Input symbol not in tape alphabet");
+    }
+
     for (Transition tr : transitions) {
         if (!states.has(tr.get_from_state()))
             throw std::runtime_error("Transition initial state not in states");
